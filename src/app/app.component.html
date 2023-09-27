@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="app.component.css" />
+
+  </head>
+  <body class="background-container1 m-3">
+    <div *ngIf="todolist.length>0" style="margin-bottom: 10px;"><b>List of Tasks</b></div>
+    <div *ngIf="todolist.length==0">No Tasks</div>
+    <div class="d-flex flex-row" style="margin-bottom:20px;">
+      <input [(ngModel)]="newTask" placeholder="type here" style="margin-right: 10px;">
+      <button (click)="addToList()">ADD</button>
+    </div>
+
+    <div *ngFor="let x of items; let index = index;" 
+            class="row mt-1">
+  
+        
+  
+        <div class="d-flex flex-row" style="margin-bottom: 15px;">
+  
+            <div style="margin-right:10px">
+              <input type="checkbox" value="">
+            </div>
+            <div style="margin-right:15px">{{x}}</div>
+            <div>
+              <input (click)="deleteTask(index)" type="button"
+              value="Delete">
+            </div>
+            
+        </div>
+          
+       
+    </div>
+
+  </body>
+</html>
+
+
+
+
+
+ 
+
+ 
+
+
