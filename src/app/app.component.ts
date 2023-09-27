@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularApp';
-  todolist = ["Brush your teeth","Attend College","Do homework"];
   public items:string[] = [];
  
   public newTask:string = "";
